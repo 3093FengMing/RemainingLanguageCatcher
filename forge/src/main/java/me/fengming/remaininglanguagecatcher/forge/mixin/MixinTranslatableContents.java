@@ -10,8 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(TranslatableContents.class)
 public class MixinTranslatableContents {
     @Redirect(method = "decompose", at = @At(value = "INVOKE", target = "Lnet/minecraft/locale/Language;getOrDefault(Ljava/lang/String;)Ljava/lang/String;"))
-    private static String decompose_Language_getOrDefault_Redirected_nullValueCheck(Language instance, String s) {
-        System.out.println("11111111");
+    private String decompose_Language_getOrDefault_Redirected_nullValueCheck(Language instance, String s) {
         String r = instance.getOrDefault(s);
         if (r.equals(s)) RemainingLanguageCatcher.foundNullValue(s);
         return r;

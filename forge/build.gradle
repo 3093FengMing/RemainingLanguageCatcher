@@ -23,6 +23,14 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
 
+loom {
+    forge {
+        mixinConfigs = [
+                "RemainingLanguageCatcher.mixins.json"
+        ]
+    }
+}
+
 processResources {
     inputs.property "version", project.version
 
