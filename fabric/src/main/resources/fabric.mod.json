@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "RemainingLanguageCatcher",
+  "id": "remaininglanguagecatcher",
   "version": "${version}",
   "name": "RemainingLanguageCatcher",
   "description": "",
@@ -9,7 +9,11 @@
   "license": "GNU GPL 3.0",
   "icon": "icon.png",
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "me.fengming.remaininglanguagecatcher.fabric.RemainingLanguageCatcherFabric"
+    ]
+  },
   "mixins": [
     "RemainingLanguageCatcher.mixins.json",
     "RemainingLanguageCatcher-common.mixins.json"
