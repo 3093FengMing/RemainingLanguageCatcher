@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "RemainingLanguageCatcher",
+  "version": "${version}",
+  "name": "RemainingLanguageCatcher",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GNU GPL 3.0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "RemainingLanguageCatcher.mixins.json",
+    "RemainingLanguageCatcher-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "minecraft": ">=1.19.2"
+  }
+}
