@@ -25,8 +25,8 @@ import java.util.regex.Pattern;
 
 @Mixin(ClientLanguage.class)
 public class MixinClientLanguage {
-    private static Gson MIRROR_GSON = new Gson();
-    private static Pattern MIRROR_UNSUPPORTED_FORMAT_PATTERN = Pattern.compile("%(\\d+\\$)?[\\d.]*[df]");
+    private static final Gson MIRROR_GSON = new Gson();
+    private static final Pattern MIRROR_UNSUPPORTED_FORMAT_PATTERN = Pattern.compile("%(\\d+\\$)?[\\d.]*[df]");
     private static Map<String, Boolean> checkDoublePutMap = new HashMap<>();
     private static Map<String, String> copiedMap = new HashMap<>();
     @Inject(method = "loadFrom", at = @At("TAIL"))
